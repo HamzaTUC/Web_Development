@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script > 
+  document.addEventListener("DOMContentLoaded", function(){
+   //alert("Our website uses coockies")
+    document.querySelector('Button').onclick=count;
+  })
+  let counter=0;
+  	function count() {
+      counter++;
+  		document.querySelector('#Button_counting').innerHTML= counter;
+  		if (counter % 10===0){
+  			alert (`Your counter is at: ${counter}`);
+  		} 
+  	}
+  </script>
+</head>
+ <body>
+      <Button  onclick = "count()"> Click to count </Button>
+      <h1 id= "Button_counting"> 0 </h1>
+ </body>
+</htm

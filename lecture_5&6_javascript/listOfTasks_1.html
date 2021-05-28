@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script > 
+  document.addEventListener("DOMContentLoaded", ()=>{
+    document.querySelector('#submitButton').disabled=true;
+    document.querySelector('#textInputed').onkeyup=()=>{
+        if (document.querySelector("#textInputed").value.length>0){
+            document.querySelector('#submitButton').disabled=false;
+        } 
+        else { 
+      document.querySelector('#submitButton').disabled=true;
+      }
+    };
+
+    document.querySelector('#task-form').onsubmit=()=> {
+
+      const li = document.createElement('li');
+      li.innerHTML = document.querySelector('#textInputed').value;
+      document.querySelector('#listOfTasks').append(li);
+      document.querySelector('#textInputed').value= '';
+      document.querySelector('#submitButton').disabled=true;
+      return false;
+
+        }; 
+      });
+  	
+  </script>
+</head>
+ <body>
+  <h1> Tasks </h1>
+      <ul id = listOfTasks>  </ul>
+    <form id="task-form">
+      <input id= "textInputed" autocomplete="off" autofocus placeholder="Add a new task" type= "text"> 
+      <input id ="submitButton" type= "submit"> 
+    </form>    
+ </body>
+</html>
+

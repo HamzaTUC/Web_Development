@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title >Application_form </title>
+
+<style>
+button{
+width:100px;
+height:30px;
+font-size:18px;
+background-color:green
+}
+
+button:hover {
+background-color:orange;
+}
+
+p::selection  {
+color:red;
+background-color:yellow;
+}
+
+</style>
+
+ </head>
+ <body>
+
+<form>
+   <div>
+	<input name= "name" type= "text" placeholder= "enter ur name">Name
+	<input name= "password" type= "password" placeholder= "Enter ur password">Password
+   </div>
+	
+   <div> favorite color?
+	<input name= "color" type= "radio" value= "red">Red
+	<input name= "color" type= "radio" value= "blue">Blue
+	<input name= "color" type= "radio" value= "green">Green	
+   </div>
+
+   <div> Home country?
+	<input name= "country" list= "countries" placeholder= "Enter ur Home country">
+	<datalist id= "countries">
+		<Option value= "Algeria">
+		<Option value= "Germany">
+		<Option value= "Morocco">
+		<Option value= "USA">	
+        </datalist>
+   </div>
+   <div>
+	 <button type="button">Submit!</button> 
+	 <button type="button">Cancel</button> 
+   </div>	
+</form>
+<p>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</p>
+ </body>
+</html> 
+
+
+
+

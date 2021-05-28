@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script > 
+  document.addEventListener("DOMContentLoaded", ()=>{
+    document.querySelector('#task-form').onsubmit=()=> {
+
+      const li = document.createElement('li');
+      li.innerHTML = document.querySelector('#textInputed').value;
+      document.querySelector('#listOfTasks').append(li);
+      document.querySelector('#textInputed').value= '';
+      return false;
+
+        }; 
+      });
+  	
+  </script>
+</head>
+ <body>
+  <h1> Tasks </h1>
+      <ul id = listOfTasks>  </ul>
+    <form id="task-form">
+      <input id= "textInputed" autocomplete="off" autofocus placeholder="Add a new task" type= "text"> 
+      <input type= "submit"> 
+    </form>    
+ </body>
+</html>
